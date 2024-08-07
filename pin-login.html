@@ -81,7 +81,12 @@
                              .join('');
             if (pin.length === 4) {
                 // Replace with your own logic to validate the PIN
-                alert('PIN entered: ' + pin);
+                if (pin === "1234") { // Replace "1234" with the actual PIN
+                    // Redirect to another page if PIN is correct
+                    window.location.href = "welcome.html"; // Replace with your target page
+                } else {
+                    alert('Invalid PIN. Please try again.');
+                }
             } else {
                 alert('Please enter a 4-digit PIN.');
             }
